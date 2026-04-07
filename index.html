@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=""
+    />
+    <title>作业展示站</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <aside class="rail">
+      <button
+        id="rail-toggle"
+        class="rail__toggle"
+        type="button"
+        aria-expanded="true"
+        aria-controls="rail-nav"
+        title="收起侧边栏"
+      >
+        <span class="rail__toggle-line"></span>
+        <span class="rail__toggle-line"></span>
+      </button>
+
+      <div class="rail__brand">
+        <div class="rail__profile">
+          <p class="rail__profile-name">丁德洋</p>
+          <div class="rail__profile-meta">
+            <p class="rail__profile-detail">北京大学</p>
+            <p class="rail__profile-detail">27届硕士-计算机技术</p>
+          </div>
+        </div>
+      </div>
+
+      <nav id="rail-nav" class="rail__nav" aria-label="分页导航">
+        <a href="#page-1" class="rail__link" data-page-link>
+          <span class="rail__index">01</span>
+          <span class="rail__label">亮眼产品</span>
+        </a>
+        <a href="#page-2" class="rail__link" data-page-link>
+          <span class="rail__index">02</span>
+          <span class="rail__label">千问建议</span>
+        </a>
+        <a href="#page-3" class="rail__link" data-page-link>
+          <span class="rail__index">03</span>
+          <span class="rail__label">隐私顾虑</span>
+        </a>
+        <a href="#page-4" class="rail__link" data-page-link>
+          <span class="rail__index">04</span>
+          <span class="rail__label">未完待续</span>
+        </a>
+      </nav>
+
+      <div class="rail__footer">
+        <div class="rail__progress">
+          <span id="progress-fill" class="rail__progress-fill"></span>
+        </div>
+      </div>
+    </aside>
+
+    <button
+      id="rail-backdrop"
+      class="rail__backdrop"
+      type="button"
+      aria-label="关闭导航"
+      hidden
+    ></button>
+
+    <main class="pages">
+      <section id="page-1" class="page page--one" data-page="1">
+        <div class="page__inner">
+          <header class="page__header">
+            <h2>眼前一亮的产品</h2>
+          </header>
+
+          <div class="page__grid page__grid--wide">
+            <article class="panel panel--text">
+              <div class="content-stack">
+                <section class="content-section">
+                  <h3 class="content-section__title">一句话介绍</h3>
+                  <p class="content-section__body"><strong>来福Laifu：</strong>一款把播客/电台内容和 AI 语音交互结合起来的“私人 AI 电台”，用户可以边听边问、边听边点播。</p>
+                </section>
+
+                <section class="content-section">
+                  <h3 class="content-section__title">最大的亮点</h3>
+                  <p class="content-section__body">能够支持实时交互，用户可以直接对正在播出的内容实时提问，播客AI主持人会进行回答，回答完毕后继续进行播客里的内容。在传统播客里，如果用户听着如果走神了，想要知道之前的内容是什么只能拉进度条倒回去听，且用户对于没听懂的地方可能需要暂停切换软件去搜索相关知识，这样的交互非常麻烦。来福试图把这些动作变成一句话完成，用户没听懂直接提问，用户走神了直接让AI总结，听前直接让AI总结全文大概。</p>
+                </section>
+              </div>
+
+              <div class="media-pair">
+                <figure class="media-card">
+                  <img src="./assets/image1.jpeg" alt="图一：来福" />
+                  <figcaption>图一：来福</figcaption>
+                </figure>
+                <figure class="media-card">
+                  <img src="./assets/image2.jpeg" alt="图二：小宇宙" />
+                  <figcaption>图二：小宇宙</figcaption>
+                </figure>
+              </div>
+
+              <div class="content-stack">
+                <section class="content-section">
+                  <h3 class="content-section__title">最大的问题</h3>
+                  <p class="content-section__body">目前平台里的内容基本都是AI生成，但在科技、资讯等高信息密度内容上，如果没有清晰标明信息来源、生成依据和时效，用户很容易怀疑：我听到的这些内容到底是不是真的、准不准确、是不是最新的。</p>
+                </section>
+
+                <section class="content-section">
+                  <h3 class="content-section__title">我会如何改进</h3>
+                  <div class="content-points">
+                    <article class="content-point">
+                      <p class="content-point__label">生产端</p>
+                      <p class="content-point__text">关于新闻内、科技咨询内的栏目一定要根据官方信息的内容进行播客生成</p>
+                    </article>
+                    <article class="content-point">
+                      <p class="content-point__label">交互侧</p>
+                      <p class="content-point__text">这类播客在前端展示上必须标注信息来源，播客里的事实性观点可以定位到原文的具体位置，从而提高用户对于播客的信任度</p>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-2" class="page page--two" data-page="2">
+        <div class="page__inner">
+          <header class="page__header">
+            <h2>给千问的建议</h2>
+          </header>
+
+          <div class="page__grid page__grid--wide">
+            <article class="panel panel--text">
+              <div class="content-stack">
+                <section class="content-section">
+                  <h3 class="content-section__title">现状</h3>
+                  <p class="content-section__body">图为前后两次发起任务的情况：</p>
+
+                  <div class="media-pair media-pair--task">
+                    <figure class="media-card media-card--task">
+                      <img src="./assets/image3.jpeg" alt="第一次任务情况截图" />
+                    </figure>
+                    <figure class="media-card media-card--task">
+                      <img src="./assets/image4.jpeg" alt="第二次任务情况截图" />
+                    </figure>
+                  </div>
+
+                  <div class="content-points content-points--timeline">
+                    <article class="content-point">
+                      <p class="content-point__text">4.3日 0:09，我表达了模糊的需求“千问，帮我订火车票”，千问通过追问，拿到了我要去的具体的目的地（上海）和时间（4.4日）</p>
+                    </article>
+                    <article class="content-point">
+                      <p class="content-point__text">4.6日晚，我再一次让千问给我订火车票，这一次我的表达是模糊的“千问，帮我订火车票”，千问直接帮我检索了4.10日从北京到上海的车票</p>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="content-section">
+                  <h3 class="content-section__title">建议</h3>
+                  <p class="content-section__body">在购票、订票、预约等任务型场景中引入“任务参数确认机制”，不要在用户表达模糊时直接沿用历史任务信息。</p>
+                  <p class="content-section__body">对于火车票、机票、电影票等任务，应先识别本次任务的关键槽位是否完整。</p>
+
+                  <div class="spec-grid">
+                    <article class="spec-card">
+                      <p class="spec-card__title">火车票/机票</p>
+                      <p class="spec-card__text">出发地、目的地、出发日期、单程/往返；</p>
+                    </article>
+                    <article class="spec-card">
+                      <p class="spec-card__title">电影票</p>
+                      <p class="spec-card__text">影片、城市/影院、观影日期、场次；</p>
+                    </article>
+                    <article class="spec-card">
+                      <p class="spec-card__title">酒店</p>
+                      <p class="spec-card__text">城市、入住日期、离店日期。</p>
+                    </article>
+                  </div>
+
+                  <p class="content-section__body">当关键参数缺失时，系统应优先发起澄清，历史偏好/对话内容可以用于推荐和默认信息补全，但不能替代每一次确认，尤其是时间和地点这类高风险信息。</p>
+                </section>
+
+                <section class="content-section">
+                  <h3 class="content-section__title">UI设计</h3>
+                  <p class="content-section__body"><strong>当用户说“帮我订火车票”时，不要直接通过文本的进行追问，也不要直接给结果，而是先弹一个简短确认卡：</strong></p>
+
+                  <div class="confirm-card" aria-label="订票确认卡">
+                    <p class="confirm-card__row"><span>出发地</span><strong>北京？</strong></p>
+                    <p class="confirm-card__row"><span>目的地</span><strong>上海？</strong></p>
+                    <p class="confirm-card__row"><span>日期</span><strong>4 月 10 日？</strong></p>
+                    <p class="confirm-card__row"><span>单程/往返</span><strong>单程？</strong></p>
+                    <p class="confirm-card__row"><span>信息来源</span><strong>基于你上次出行偏好推测</strong></p>
+                  </div>
+
+                  <p class="content-highlight">这样用户能一眼看出系统默认了什么，也能清楚哪些需要澄清需求</p>
+                </section>
+
+                <section class="content-section">
+                  <h3 class="content-section__title">思考</h3>
+                  <p class="content-section__body">普通聊天场景里，AI 根据上下文补全信息会让模型更好的回答用户的问题；但在购票这类执行型场景里，基于上下文的过渡推理会直接导致结果偏差，非常影响用户信任。</p>
+                  <p class="content-section__body">这个情景体现的是千问当前对“历史上下文继承”和“本次任务确认”之间的边界还不够清晰。我认为更好的方式既不是自主判断用户的模糊需求执行任务，也不是简单地每次都追问，而是对每一类的任务参数进行分级：低风险偏好可基于上下文/用户偏好直接继承（比如电影题材、酒店星级），高风险核心参数可以预先填写（时间、地点）但必须向用户确认。这样既保留效率，也能减少误解和误操作，提升任务执行的可靠性，增强用户的体验感。</p>
+                </section>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="page-3" class="page page--three" data-page="3">
+        <div class="page__inner">
+          <header class="page__header">
+            <h2>用户隐私顾虑</h2>
+          </header>
+
+          <article class="panel panel--text">
+            <div class="content-stack">
+              <section class="content-section">
+                <h3 class="content-section__title">1、为什么需要长期记忆（即长期记忆如何提升体验）</h3>
+                <p class="content-section__body">长期记忆的本质是帮助AI记住那些稳定且有高价值的信息，比如用户的语言偏好、回答风格偏好、近期的状况、关注的话题、生活习惯等等等。在用户高频咨询某一类话题时，用户就不需要每次都重复介绍相关的信息，AI能基于长期记忆提供更连续、更贴合场景的服务。对一款AI助手类的产品来说，它提升的是使用效率、对话连贯性和用户粘性，让AI真正变得越来越懂用户。</p>
+              </section>
+
+              <section class="content-section">
+                <h3 class="content-section__title">2、为什么用户会有顾虑（什么样的记忆会让用户有顾虑）</h3>
+                <p class="content-section__body">从某种意义来说关于用户的信息越多，AI就越懂用户。但用户可能不希望自己全方位信息都掌握在第三方平台上。而容易引发用户顾虑的记忆，通常包括敏感信息，比如名字、个人图片、密码、证件信息、健康、精确位置、社交关系、个人/企业项目机密等。另外，我觉得用户还会担心两个问题：一是系统在黑盒里自动形成长期记忆，但用户自己不知道系统记了什么；二是有时候把用户的一次性表达误认为长期偏好，之后一直按错误记忆来回应。总的来说，用户担心的是长期记忆的边界不清楚、用途不明确和纠错困难。</p>
+              </section>
+
+              <section class="content-section">
+                <h3 class="content-section__title">3、如何做当用户消除顾虑</h3>
+                <div class="principle-grid">
+                  <article class="principle-card">
+                    <p class="principle-card__index">第一</p>
+                    <p class="principle-card__text">设定系统的长期记忆规则，告知AI哪些需要记，哪些不能记，且当用户发出敏感信息时，触发提醒，告知用户当前信息为敏感信息不会被记入长期记忆，若用户想要系统记住，可在会话中点击按钮手动添加；</p>
+                  </article>
+                  <article class="principle-card">
+                    <p class="principle-card__index">第二</p>
+                    <p class="principle-card__text">给用户一个记忆管理空间，在空间内，用户能查看、编辑、删除记忆；</p>
+                  </article>
+                  <article class="principle-card">
+                    <p class="principle-card__index">第三</p>
+                    <p class="principle-card__text">当AI使用记忆时，给出轻提示和来源，降低用户对于AI记得自己某一个事情而产生的焦虑；</p>
+                  </article>
+                  <article class="principle-card">
+                    <p class="principle-card__index">第四</p>
+                    <p class="principle-card__text">提供无痕模式，在这个模式里，用户可以选择是否使用长期记忆，且用户在这个会话里所有记录都不会被记入，关闭会话即删除</p>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="page-4" class="page page--four" data-page="4">
+        <div class="page__inner page__inner--centered">
+          <header class="page__header page__header--compact">
+            <h2>未完待续</h2>
+          </header>
+
+          <article class="panel panel--closing">
+            <p>关于其他几个问题我也有着自己的思考，优先按照老师规定的2-3个问题回答。如果老师感兴趣，我可以在面试中和老师详细说对于余下几个问题的思考。非常感谢老师花时间阅读我的作业，祝老师工作顺利，天天开心！</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
